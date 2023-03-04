@@ -4,9 +4,9 @@
     <span class="block sm:inline">{{errorMessage$ | async}}</span>  
 </div>
 
-  <div class='overflow-x-scroll h-101' style="min-height: 429px;">
+  <!-- <div class='overflow-x-scroll h-101' style="min-height: 429px;"> </div> -->
     <div class="spinner" *ngIf="(loadingStatu$ | async)=='loading'; ">
-      <div role="status" class="flex flex-row justify-center ">
+           <div role="status" class="flex flex-row justify-center ">
         <div>
           <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -15,8 +15,55 @@
           <span class="sr-only">Loading...</span></div>
         </div>
      </div>
-     <div class="w-full " >
-      <table class="table-auto border-collapse w-full" *ngIf="(loadingStatu$ | async)=='success'">
+     <div class="container w-full " >
+      <table  *ngIf="(loadingStatu$ | async)=='success'" class="ßmd:visible w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+        <thead class="invisible lg:visible md:visible" >
+          <tr class="invisible lg:visible md:visible font-medium text-gray-700 text-left flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" style="background-color:#f8f8f8">
+            <th class="p-3 text-left ">Name</th>
+            <th class="p-3 text-left">Email</th>
+            <th class="p-3 text-left">Age</th>
+            <th class="p-3 text-left" width="110px">Action</th>
+          </tr>
+          <!-- <tr class="font-medium text-gray-700 text-left flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" style="background-color:#f8f8f8">
+            <th class="p-3 text-left">Name</th>
+            <th class="p-3 text-left">Email</th>
+            <th class="p-3 text-left">Age</th>
+            <th class="p-3 text-left" width="110px">&nbsp;</th>
+          </tr>
+          <tr class="font-medium text-gray-700 text-left flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" style="background-color:#f8f8f8">
+            <th class="p-3 text-left">Name</th>
+            <th class="p-3 text-left">Email</th>
+            <th class="p-3 text-left">Age</th>
+            <th class="p-3 text-left" width="110px">&nbsp;</th>
+          </tr> -->
+        
+        </thead>
+        <tbody class="flex-1 sm:flex-none">
+          <tr *ngFor="let user of usersData$ | async" class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0 hover:bg-gray-100 border-b border-gray-200 py-10">
+            <td class="border-blue-light border hover:bg-gray-100 p-3">{{user.name}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{user.email}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{user.age}}</td>
+            <td class="border-grey-light border hover:bg-grey-100 p-3 truncate ">
+              <a mat-icon-button [routerLink]="['/users', user.id]"> 
+                <mat-icon class="text-blue-600">edit</mat-icon>
+              </a>
+            </td>
+          </tr>     
+               
+        </tbody>
+      </table>
+
+  <!-- Paging here-->
+  <app-pager
+      [pagerModel]="pagerViewModel$ | async"
+      (GotoPageSelected)="goToPage($any($event))"
+      (NextPageSelected)="NextPage()"
+      (PrevPageSelected)="PrevPage()"
+      (NextPageRangeSelected)="NextPageRange()"
+      (PrevPageRangeSelected)="PrevPageRange()"></app-pager> 
+  <!-- Paging ends -->
+
+    <!--   <table class="table-auto border-collapse w-full" *ngIf="(loadingStatu$ | async)=='success'">
         <thead>
           <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
             <th class="px-4 py-2 bg-gray-200 " style="background-color:#f8f8f8">Name</th>
@@ -37,19 +84,8 @@
             </td>
           </tr>    
         </tbody>
-      </table>
+      </table> -->
     </div>
-  <!--    -->
-  </div>
-  <!-- Paging here-->
-  <app-pager
-      [pagerModel]="pagerViewModel$ | async"
-      (GotoPageSelected)="goToPage($any($event))"
-      (NextPageSelected)="NextPage()"
-      (PrevPageSelected)="PrevPage()"
-      (NextPageRangeSelected)="NextPageRange()"
-      (PrevPageRangeSelected)="PrevPageRange()"></app-pager> 
-  <!-- Paging ends -->
 
 </div>
 

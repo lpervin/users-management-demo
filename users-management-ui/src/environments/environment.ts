@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_baseurl: "https://localhost:7295/user"
+  api_baseurl: "https://api.pervin.me/user"
 };
 
 /*
