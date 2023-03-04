@@ -1,5 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+/.idea
 /bin
 /obj
 
@@ -64,3 +65,60 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+users-webapi/users-webapi/bin/Debug/net6.0/Bogus.dll
+users-webapi/users-webapi/bin/Debug/net6.0/DnsClient.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Microsoft.OpenApi.dll
+users-webapi/users-webapi/bin/Debug/net6.0/MongoDB.Bson.dll
+users-webapi/users-webapi/bin/Debug/net6.0/MongoDB.Driver.Core.dll
+users-webapi/users-webapi/bin/Debug/net6.0/MongoDB.Driver.dll
+users-webapi/users-webapi/bin/Debug/net6.0/MongoDB.Libmongocrypt.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Newtonsoft.Json.dll
+users-webapi/users-webapi/bin/Debug/net6.0/SharpCompress.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Snappier.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+users-webapi/users-webapi/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+users-webapi/users-webapi/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+users-webapi/users-webapi/bin/Debug/net6.0/System.Web.Cors.dll
+users-webapi/users-webapi/bin/Debug/net6.0/System.Web.Http.Cors.dll
+users-webapi/users-webapi/bin/Debug/net6.0/System.Web.Http.dll
+users-webapi/users-webapi/bin/Debug/net6.0/users-webapi
+users-webapi/users-webapi/bin/Debug/net6.0/users-webapi.deps.json
+users-webapi/users-webapi/bin/Debug/net6.0/users-webapi.dll
+users-webapi/users-webapi/bin/Debug/net6.0/users-webapi.pdb
+users-webapi/users-webapi/bin/Debug/net6.0/users-webapi.runtimeconfig.json
+users-webapi/users-webapi/bin/Debug/net6.0/ZstdSharp.dll
+users-webapi/users-webapi/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so
+users-webapi/users-webapi/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
+users-webapi/users-webapi/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
+users-webapi/users-webapi/obj/project.assets.json
+users-webapi/users-webapi/obj/project.nuget.cache
+users-webapi/users-webapi/obj/project.packagespec.json
+users-webapi/users-webapi/obj/rider.project.restore.info
+users-webapi/users-webapi/obj/staticwebassets.pack.sentinel
+users-webapi/users-webapi/obj/users-webapi.csproj.nuget.dgspec.json
+users-webapi/users-webapi/obj/users-webapi.csproj.nuget.g.props
+users-webapi/users-webapi/obj/users-webapi.csproj.nuget.g.targets
+users-webapi/users-webapi/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+users-webapi/users-webapi/obj/Debug/net6.0/apphost
+users-webapi/users-webapi/obj/Debug/net6.0/staticwebassets.build.json
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.AssemblyInfo.cs
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.AssemblyInfoInputs.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.assets.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.csproj.AssemblyReference.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.csproj.CopyComplete
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.csproj.CoreCompileInputs.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.csproj.FileListAbsolute.txt
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.dll
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.GeneratedMSBuildEditorConfig.editorconfig
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.genruntimeconfig.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.GlobalUsings.g.cs
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.MvcApplicationPartsAssemblyInfo.cache
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.MvcApplicationPartsAssemblyInfo.cs
+users-webapi/users-webapi/obj/Debug/net6.0/users-webapi.pdb
+users-webapi/users-webapi/obj/Debug/net6.0/ref/users-webapi.dll
+users-webapi/users-webapi/obj/Debug/net6.0/refint/users-webapi.dll
+users-webapi/users-webapi-tests/obj/Debug/net6.0/users-webapi-tests.csproj.AssemblyReference.cache
+users-webapi/users-webapi-tests/obj/Debug/net6.0/users-webapi-tests.csproj.AssemblyReference.cache
+users-webapi/users-webapi-tests/obj/Debug/net6.0/users-webapi-tests.csproj.AssemblyReference.cache
