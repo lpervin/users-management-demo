@@ -1,0 +1,42 @@
+<div *ngIf="pagerModel!.numberOfpages ?? 0>0">
+    <div class="flex flex-row justify-between my-2">
+      <div>
+        <label>Go to Page:</label>
+        <select type="number" #selectedPage 
+        (change)='goToPage(selectedPage.value)'>
+          <option *ngFor="let page of pagerModel!.AvailabelPages" [ngValue]="page">{{page}}</option>
+        </select>
+      </div>
+       <div>Selected Page: {{pagerModel!.currentPageNumber}} of {{pagerModel!.numberOfpages}}</div> 
+    
+    </div>
+    <div class="flex flex-row justify-between ">
+        <div style="position: relative; top: 5px">
+            <span *ngIf="pagerModel!.PreviousPageRangeAvailable">
+              <a href="#" class="no-underline hover:underline text-cyan-600 dark:text-cyan-400" title="Next Page Range" (click)="PrevPageRange(); "> ...</a>
+            </span>
+            <span *ngFor="let page of pagerModel!.VisiablePageRanges" >
+              <span *ngIf="page==pagerModel!.currentPageNumber; else elseBlock" >{{page}}</span>
+                  <ng-template #elseBlock>
+                    <a href="#" class="no-underline hover:underline text-cyan-600 dark:text-cyan-400" (click)="goToPage(page); " > {{page}}</a> &nbsp;
+              </ng-template>
+            </span> 
+            <span *ngIf="pagerModel!.NextPageRangeAvailable">
+              <a href="#"  class="no-underline hover:underline text-cyan-600 dark:text-cyan-400" title="Next Page Range" (click)="NextPageRange(); " > ...</a>
+            </span>      
+         </div>
+      
+        <div class="ml-6">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white active:bg-sky-600 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
+          (click)="PrevPage()">
+              &lt;&lt; Prev
+          </button>
+        
+          <button class="bg-blue-500 hover:bg-blue-700 text-white active:bg-sky-600 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
+          (click)="NextPage()">
+                Next &gt;&gt;
+          </button>
+  
+        </div>
+    </div>
+    </div>   

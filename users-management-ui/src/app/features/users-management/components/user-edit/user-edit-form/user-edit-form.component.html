@@ -1,0 +1,31 @@
+
+    <form [formGroup]="userForm" #f="ngForm" (submit)="onSubmit(f.value)">
+     <div>   <mat-card-content>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="name" type="text" />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="age"
+              formControlName="age"
+              type="number"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="email"
+              formControlName="email"
+              type="text"
+            />
+          </mat-form-field>
+        </mat-card-content>
+        </div>
+            <div class="inline-flex items-center justify-between w-full">       
+                <!-- <button class="bg-red-500 hover:bg-red-700 text-white active:bg-sky-600 font-bold text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
+                (click)="Cancel()">Cancel</button>  -->            
+                <button type="button" mat-button (click)="cancel.emit()" class="bg-red-500 hover:bg-red-700">Cancel</button>
+                <button type="submit" mat-button class="bg-blue-500 hover:bg-blue-700">Save</button>         
+            </div>
+      </form>

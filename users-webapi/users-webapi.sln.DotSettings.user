@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f887dde_002D328c_002D4453_002Dbce8_002D2c54960387f1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CanReadUsers" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6D0E6072-904C-4E16-A606-8E4474A3D164::net6.0::users_webapi_tests.QueryTestUsers.CanPageUsers&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6D0E6072-904C-4E16-A606-8E4474A3D164::net6.0::users_webapi_tests.QueryTestUsers.CanFindUsers&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6D0E6072-904C-4E16-A606-8E4474A3D164::net6.0::users_webapi_tests.UpdateUsersTest.UpdateOneUser&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>
